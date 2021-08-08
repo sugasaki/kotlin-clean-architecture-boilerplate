@@ -1,1 +1,0 @@
-# kotlin-clean-architecture-boilerplate
