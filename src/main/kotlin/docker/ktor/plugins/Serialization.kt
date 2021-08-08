@@ -1,12 +1,14 @@
 package docker.ktor.plugins
 
-import com.fasterxml.jackson.databind.* // ktlint-disable no-wildcard-imports
-import io.ktor.application.*
-import io.ktor.features.*
-import io.ktor.jackson.*
-import io.ktor.request.*
-import io.ktor.response.*
-import io.ktor.routing.*
+import com.fasterxml.jackson.databind.SerializationFeature
+import io.ktor.application.Application
+import io.ktor.application.call
+import io.ktor.application.install
+import io.ktor.features.ContentNegotiation
+import io.ktor.jackson.jackson
+import io.ktor.response.respond
+import io.ktor.routing.get
+import io.ktor.routing.routing
 
 fun Application.configureSerialization() {
     install(ContentNegotiation) {

@@ -1,9 +1,12 @@
 package docker.ktor
 
-import docker.ktor.plugins.*
-import io.ktor.http.*
-import io.ktor.server.testing.*
-import kotlin.test.*
+import docker.ktor.plugins.configureRouting
+import io.ktor.http.HttpMethod
+import io.ktor.http.HttpStatusCode
+import io.ktor.server.testing.handleRequest
+import io.ktor.server.testing.withTestApplication
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class ApplicationTest {
     @Test

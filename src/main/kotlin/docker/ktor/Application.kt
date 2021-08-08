@@ -1,8 +1,9 @@
 package docker.ktor
 
-import io.ktor.server.engine.*
-import io.ktor.server.netty.*
-import docker.ktor.plugins.*
+import docker.ktor.plugins.configureRouting
+import docker.ktor.plugins.configureSerialization
+import io.ktor.server.engine.embeddedServer
+import io.ktor.server.netty.Netty
 
 fun main() {
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
