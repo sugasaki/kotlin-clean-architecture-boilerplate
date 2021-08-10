@@ -4,8 +4,8 @@ import domain.repository.IUserRepository
 import interfaces.controller.user.UsersController
 import org.koin.dsl.module
 import repository.user.UserRepository
-import usecases.usecase.user.FindUsers
-import usecases.usecase.user.IFindUsers
+import usecase.user.FindUsers
+import usecase.user.IFindUsers
 
 val AppModule = module {
     // Controllers

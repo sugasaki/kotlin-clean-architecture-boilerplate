@@ -6,18 +6,21 @@ plugins {
 allprojects {
     group = "com.sugasaki"
     version = "1.0-SNAPSHOT"
+
+    repositories {
+        mavenCentral()
+        maven(url = "https://jitpack.io")
+    }
 }
 
 subprojects {
 
     apply(plugin = "kotlin")
-    repositories {
-        mavenCentral()
-    }
 
     afterEvaluate {
         dependencies {
             "implementation"("com.michael-bull.kotlin-result", "kotlin-result", libs.versions.kotlinResult.get())
+            "implementation"("com.github.ProjectMapK", "KMapper", libs.versions.kmapper.get())
 
             "testImplementation"(kotlin("test"))
             "testImplementation"("org.jetbrains.kotlinx", "kotlinx-coroutines-core", libs.versions.coroutines.get())

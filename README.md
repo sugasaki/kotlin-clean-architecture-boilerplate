@@ -18,5 +18,6 @@ The application is separated into three modules: Domain, infrastructure , reposi
 - [Mockk](https://mockk.io/)
 - [jackson](https://github.com/FasterXML/jackson)
 - [kotlin-result](https://github.com/michaelbull/kotlin-result)
+- [KMapper](https://github.com/ProjectMapK/KMapper)
 
 
