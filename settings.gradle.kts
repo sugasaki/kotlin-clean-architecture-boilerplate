@@ -8,7 +8,8 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(
     ":domain",
     ":infrastructure",
-    ":repositories"
+    ":repositories",
+    ":use-cases"
 )
 
 enableFeaturePreview("VERSION_CATALOGS")
@@ -21,3 +22,4 @@ dependencyResolutionManagement {
         }
     }
 }
+include("use-cases")
