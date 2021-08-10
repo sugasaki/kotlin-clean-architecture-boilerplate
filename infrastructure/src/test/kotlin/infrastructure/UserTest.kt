@@ -15,9 +15,9 @@ class UserTest {
     @Test
     fun testRoot() {
         withTestApplication({ module(testing = true) }) {
-        handleRequest(HttpMethod.Get, "/user/1").apply {
-            assertEquals(HttpStatusCode.OK, response.status())
+            handleRequest(HttpMethod.Get, "/user/1").apply {
+                assertEquals(HttpStatusCode.OK, response.status())
+            }
         }
-    }
     }
 }
