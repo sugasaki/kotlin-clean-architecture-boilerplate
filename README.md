@@ -9,3 +9,6 @@ The application is separated into three modules: Domain, infrastructure , reposi
 
 - Ktor
 - ktlint
+- Koin
+- Mockk
+- jackson
