@@ -1,5 +1,5 @@
 package domain.entity
 
 interface IEntity {
-    val id: Int
+    val id: Long
 }
