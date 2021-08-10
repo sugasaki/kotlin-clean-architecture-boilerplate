@@ -1,5 +1,7 @@
 package interfaces.controller.user
 
+import com.github.michaelbull.result.Ok
+import com.github.michaelbull.result.get
 import interfaces.controller.Response
 import usecases.usecase.model.UserModel
 import usecases.usecase.user.IFindUsers
@@ -9,8 +11,8 @@ class UsersController(
 ) {
     suspend fun findById(id: Long): Response<UserModel> {
         return when (val result = findUsersUseCase.execute(id)) {
-            null -> Response(400, errorMessage = "")
-            else -> Response(200, result)
+            is Ok -> Response(200, result.value)
+            else -> Response(400, errorMessage = "")
         }
     }
 }

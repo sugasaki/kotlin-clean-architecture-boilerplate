@@ -17,8 +17,11 @@ subprojects {
 
     afterEvaluate {
         dependencies {
+            "implementation"("com.michael-bull.kotlin-result", "kotlin-result", libs.versions.kotlinResult.get())
+
             "testImplementation"(kotlin("test"))
             "testImplementation"("org.jetbrains.kotlinx", "kotlinx-coroutines-core", libs.versions.coroutines.get())
+            "testImplementation"("org.assertj", "assertj-core", libs.versions.assertj.get())
             "testImplementation"("io.mockk", "mockk", libs.versions.mockk.get())
         }
     }
