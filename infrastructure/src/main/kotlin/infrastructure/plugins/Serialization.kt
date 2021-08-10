@@ -1,4 +1,4 @@
-package docker.ktor.plugins
+package infrastructure.plugins
 
 import com.fasterxml.jackson.databind.SerializationFeature
 import io.ktor.application.Application
