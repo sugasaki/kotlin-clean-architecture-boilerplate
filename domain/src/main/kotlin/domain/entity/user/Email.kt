@@ -1,9 +1,9 @@
 package domain.entity.user
 
-import domain.entity.IValueClass
+import domain.entity.ValueStringClass
 import domain.exceptions.EmailInvalidException
 
-data class Email(override val value: String) : IValueClass<String> {
+data class Email(override val value: String) : ValueStringClass {
     init {
         if (!value.contains('@')) throw EmailInvalidException()
     }

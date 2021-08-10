@@ -11,7 +11,7 @@ class UsersController(
     suspend fun findById(id: Long): Response<UserModel> {
         return when (val result = findUsersUseCase.execute(id)) {
             is Ok -> Response(200, result.value)
-            else -> Response(400, errorMessage = "")
+            else -> Response(400, errorMessage = "user not found")
         }
     }
 }
