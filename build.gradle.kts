@@ -19,6 +19,7 @@ subprojects {
         dependencies {
             "testImplementation"(kotlin("test"))
             "testImplementation"("org.jetbrains.kotlinx", "kotlinx-coroutines-core", libs.versions.coroutines.get())
+            "testImplementation"("io.mockk", "mockk", libs.versions.mockk.get())
         }
     }
 

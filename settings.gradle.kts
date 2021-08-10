@@ -19,7 +19,7 @@ dependencyResolutionManagement {
             version("coroutines", "1.5.1")
             version("ktor", "1.6.2")
             version("logback", "1.2.5")
+            version("mockk", "1.12.0")
         }
     }
 }
-include("use-cases")
