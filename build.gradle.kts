@@ -19,13 +19,14 @@ subprojects {
         dependencies {
             "testImplementation"(kotlin("test"))
             "testImplementation"("org.jetbrains.kotlinx", "kotlinx-coroutines-core", libs.versions.coroutines.get())
+            "testImplementation"("io.mockk", "mockk", libs.versions.mockk.get())
         }
     }
 
     // ktlint
     val ktlint by configurations.creating
     dependencies {
-        ktlint("com.pinterest:ktlint:0.42.0") {
+        ktlint("com.pinterest:ktlint:0.42.1") {
             attributes {
                 attribute(Bundling.BUNDLING_ATTRIBUTE, objects.named(Bundling.EXTERNAL))
             }
