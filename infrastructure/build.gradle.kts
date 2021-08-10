@@ -22,8 +22,8 @@ tasks {
 }
 
 application {
-//    mainClass.set("io.ktor.server.cio.EngineMain")
-    mainClass.set("docker.ktor.ApplicationKt")
+    mainClass.set("io.ktor.server.netty.EngineMain")
+//    mainClass.set("docker.ktor.ApplicationKt")
 }
 
 dependencies {
