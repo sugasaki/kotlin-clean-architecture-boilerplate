@@ -1,4 +1,3 @@
-@file:Suppress("unused")
 
 plugins {
     kotlin("jvm") version "1.5.21" apply false
@@ -37,7 +36,7 @@ subprojects {
     val outputDir = "${project.buildDir}/reports/ktlint/"
     val inputFiles = project.fileTree(mapOf("dir" to "src", "include" to "**/*.kt"))
 
-    @Suppress("unused")
+    @Suppress("UNUSED_VARIABLE")
     val ktlintCheck by tasks.creating(JavaExec::class) {
         inputs.files(inputFiles)
         outputs.dir(outputDir)
@@ -49,7 +48,7 @@ subprojects {
         args = listOf("src/**/*.kt")
     }
 
-    @Suppress("UNUSED")
+    @Suppress("UNUSED_VARIABLE")
     val ktlintFormat by tasks.creating(JavaExec::class) {
         inputs.files(inputFiles)
         outputs.dir(outputDir)
