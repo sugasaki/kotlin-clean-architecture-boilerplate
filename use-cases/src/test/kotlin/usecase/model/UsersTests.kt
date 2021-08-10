@@ -8,7 +8,7 @@ class UsersTests {
 
     @Test
     fun `toUserModel test`() {
-        val expected = UserModel(id = user.id, firstName = user.firstName, lastName = user.lastName, email = user.email)
+        val expected = UserModel(id = user.id, firstName = user.firstName, lastName = user.lastName, email = user.email.value)
         val actual = user.toUserModel()
         Assertions.assertThat(actual).isEqualTo(expected)
     }
