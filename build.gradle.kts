@@ -4,7 +4,7 @@ plugins {
 }
 
 allprojects {
-    group = "com.erikschouten"
+    group = "com.sugasaki"
     version = "1.0-SNAPSHOT"
 }
 
@@ -18,7 +18,7 @@ subprojects {
     afterEvaluate {
         dependencies {
             "testImplementation"(kotlin("test"))
-            "testImplementation"("io.mockk", "mockk", libs.versions.mockk.get())
+            "testImplementation"("org.jetbrains.kotlinx", "kotlinx-coroutines-core", libs.versions.coroutines.get())
         }
     }
 
