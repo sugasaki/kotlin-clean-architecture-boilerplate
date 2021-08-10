@@ -20,7 +20,6 @@ subprojects {
     afterEvaluate {
         dependencies {
             "implementation"("com.michael-bull.kotlin-result", "kotlin-result", libs.versions.kotlinResult.get())
-
             "implementation"("com.github.ProjectMapK", "KMapper", libs.versions.kmapper.get())
 
             "testImplementation"(kotlin("test"))
