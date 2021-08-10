@@ -5,6 +5,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.locations.KtorExperimentalLocationsAPI
 import io.ktor.server.testing.handleRequest
 import io.ktor.server.testing.withTestApplication
+import org.assertj.core.api.Assertions
 import org.koin.core.annotation.KoinInternalApi
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -17,7 +18,7 @@ class ApplicationTest {
         withTestApplication({ module(testing = true) }) {
             handleRequest(HttpMethod.Get, "/").apply {
                 assertEquals(HttpStatusCode.OK, response.status())
-                assertEquals("Hello World!", response.content)
+                Assertions.assertThat(response.content).isEqualTo("Hello World!")
             }
         }
     }

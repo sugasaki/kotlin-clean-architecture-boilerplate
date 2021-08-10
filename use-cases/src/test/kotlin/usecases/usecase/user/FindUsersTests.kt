@@ -1,12 +1,17 @@
 package usecases.usecase.user
 
+import com.github.michaelbull.result.Err
+import com.github.michaelbull.result.Ok
+import com.github.michaelbull.result.get
+import com.github.michaelbull.result.getError
+import domain.UserNotFound
 import domain.repository.IUserRepository
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import kotlinx.coroutines.runBlocking
+import org.assertj.core.api.Assertions
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 class FindUsersTests {
 
@@ -16,10 +21,9 @@ class FindUsersTests {
     @Test
     fun success() {
         runBlocking {
-            val expected = userModel
-            every { runBlocking { repository.findById(id) } } returns user
-            val actual = usecase.execute(id)
-            assertEquals(actual, expected)
+            every { runBlocking { repository.findById(id) } } returns Ok(user)
+            val actual = usecase.execute(id).get()
+            Assertions.assertThat(actual?.id).isEqualTo(id)
         }
         verify(exactly = 1) { runBlocking { repository.findById(any()) } }
     }
@@ -27,10 +31,10 @@ class FindUsersTests {
     @Test
     fun `No user`() {
         runBlocking {
-            val expected = null
-            every { runBlocking { repository.findById(any()) } } returns null
-            val actual = usecase.execute(-1)
-            assertEquals(actual, expected)
+            val expected = UserNotFound
+            every { runBlocking { repository.findById(any()) } } returns Err(UserNotFound)
+            val actual = usecase.execute(-1).getError()
+            Assertions.assertThat(actual).isEqualTo(expected)
         }
     }
 }
