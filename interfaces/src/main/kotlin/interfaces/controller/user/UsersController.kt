@@ -1,10 +1,9 @@
 package interfaces.controller.user
 
 import com.github.michaelbull.result.Ok
-import com.github.michaelbull.result.get
 import interfaces.controller.Response
-import usecases.usecase.model.UserModel
-import usecases.usecase.user.IFindUsers
+import usecase.model.UserModel
+import usecase.user.IFindUsers
 
 class UsersController(
     private val findUsersUseCase: IFindUsers,

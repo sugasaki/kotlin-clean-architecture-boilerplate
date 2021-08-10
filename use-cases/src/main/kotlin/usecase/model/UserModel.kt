@@ -1,4 +1,4 @@
-package usecases.usecase.model
+package usecase.model
 
 import com.mapk.annotations.KConverter
 import com.mapk.kmapper.KMapper

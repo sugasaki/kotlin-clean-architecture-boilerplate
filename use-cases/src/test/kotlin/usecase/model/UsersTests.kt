@@ -1,7 +1,7 @@
-package usecases.usecase.model
+package usecase.model
 
 import org.assertj.core.api.Assertions
-import usecases.usecase.user.user
+import usecase.user
 import kotlin.test.Test
 
 class UsersTests {

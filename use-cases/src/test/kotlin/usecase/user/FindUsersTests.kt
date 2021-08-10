@@ -1,4 +1,4 @@
-package usecases.usecase.user
+package usecase.user
 
 import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
@@ -11,6 +11,9 @@ import io.mockk.mockk
 import io.mockk.verify
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions
+import usecase.id
+import usecase.user
+import usecase.userModel
 import kotlin.test.Test
 
 class FindUsersTests {

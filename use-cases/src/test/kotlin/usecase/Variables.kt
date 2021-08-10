@@ -1,8 +1,8 @@
-package usecases.usecase.user
+package usecase
 
 import domain.entity.user.Email
 import domain.entity.user.User
-import usecases.usecase.model.toUserModel
+import usecase.model.toUserModel
 
 const val id: Long = 1
 val email = Email("erik@erikschouten.com")
