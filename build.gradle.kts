@@ -16,6 +16,7 @@ subprojects {
     afterEvaluate {
         dependencies {
             "testImplementation"(kotlin("test"))
+            "testImplementation"("org.jetbrains.kotlinx", "kotlinx-coroutines-core", libs.versions.coroutines.get())
         }
     }
 }
