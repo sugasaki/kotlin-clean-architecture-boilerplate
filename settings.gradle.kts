@@ -9,7 +9,8 @@ include(
     ":domain",
     ":infrastructure",
     ":repositories",
-    ":use-cases"
+    ":use-cases",
+    ":interfaces"
 )
 
 enableFeaturePreview("VERSION_CATALOGS")
@@ -20,6 +21,7 @@ dependencyResolutionManagement {
             version("ktor", "1.6.2")
             version("logback", "1.2.5")
             version("mockk", "1.12.0")
+            version("koin", "3.1.2")
         }
     }
 }
