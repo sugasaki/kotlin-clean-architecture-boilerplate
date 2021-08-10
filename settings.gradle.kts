@@ -22,6 +22,8 @@ dependencyResolutionManagement {
             version("logback", "1.2.5")
             version("mockk", "1.12.0")
             version("koin", "3.1.2")
+            version("kotlinResult", "1.1.12")
+            version("assertj", "3.20.2")
             version("kmapper", "0.36")
         }
     }
